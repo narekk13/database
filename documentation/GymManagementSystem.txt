@@ -1,0 +1,63 @@
+Gym Management System
+
+1. Database Tables
+
+	gym_customers:
+		user_id (PK)
+		username
+		passkey
+		age 
+		gender 
+		subscription_id
+		subscription_start
+		subscription_end
+		trainer_id
+	
+	subscription:
+	    sub_id 
+	    sub_type 
+	    price
+    
+    trainers:
+        trainer_id
+        trainer_name
+        gender
+        age
+        price
+        
+2. Relationships
+
+    A subscription can be purchased by many customers.
+    
+    A trainer can train many customers.
+    
+    Each customer belongs to one subscription.
+    
+    Each customer can be assigned to one trainer.
+    
+    A customer might not have a trainer assigned
+ 
+3. Required Constraints
+    
+    Every table must have a PRIMARY KEY.
+    
+    The customer's username must be UNIQUE across the database.
+    
+    The customer's subscription ID cannot be null
+    
+    The trainer ID for a customer is optional and can accept null values
+
+4. Sample data
+    4 customers
+    3 subscription
+    3 trainers
+    
+5.
+    1)Display all clients
+    
+    2)Display all available subscriptions with their prices
+    
+    3)Display all customers with subscription types and trainer names
+    
+    4)Display all customers assigned to a selected trainer
+    
